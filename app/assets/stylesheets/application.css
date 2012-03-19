@@ -5,7 +5,7 @@
  *= require_self
  *= require_tree . 
 */
-.flash_error {
+.flash_error, .flash_trfe {
   background-color: #ffeded;
   border: 1px #f58a8a solid;
   border-left:none;
@@ -16,7 +16,7 @@
   font-weight:bold;
 }
 
-.flash_notice {
+.flash_notice, .flash_trfn {
   background-color: #f1ffed;
   border: 1px #a3f58a solid;
   border-left:none;

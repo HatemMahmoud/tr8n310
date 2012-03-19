@@ -5,11 +5,18 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= tr8n_scripts_tag %>
 </head>
 <body>
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: "flash_#{name}" %>
-  <% end %>
-  <%= yield %>
+  <div style="float: right">
+    <%= tr8n_language_selector_tag %>
+  </div>
+  <div style="clear: both">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "flash_#{name}" %>
+    <% end %>
+    <%= yield %>
+  </div>
+  <%= tr8n_language_strip_tag %>
 </body>
 </html>
